@@ -17,7 +17,6 @@ def link():
 
 @pytest.fixture(scope="class")
 def browser(request):
-    print(request)
     user_language = request.config.getoption("language")
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
